@@ -23,7 +23,7 @@ Date.prototype.toCommonSay = function() {
     var gap_time = parseInt((ctime - time) / 1000, 10); // 相差的秒数
 
     var datestr;
-    var timestr = (isAm ? '上午' : '下午') + h + ':' + m;
+    var timestr = (isAm ? '上午' : '下午') + h + ':' + (m < 10 ? '0' + m : m);
 
     if (gap_time > 0) {
         if (gap_time < 60) {
